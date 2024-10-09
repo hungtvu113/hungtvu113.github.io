@@ -10,7 +10,7 @@ h1 {
 }
 
 .top-nav {
-    background-color: #f0f4fb;
+
     padding: 10px;
     display: flex;
     align-items: center;
@@ -56,6 +56,7 @@ h1 {
     0% {
         transform: translateX(100%);
     }
+
     100% {
         transform: translateX(-100%);
     }
@@ -187,40 +188,74 @@ h1 {
 }
 
 .hamburger {
-    font-size: 24px;
-    color: rgb(14, 13, 13);
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
     border: none;
-    background: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger:focus {
     outline: none;
 }
 
+.hamburger span {
+    width: 2rem;
+    height: 0.25rem;
+    background: #fefe01f9;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.hamburger.active span:first-child {
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
 .dropdown-menu {
-    display: none;
     position: absolute;
-    top: 100px;
-    left: 0px;
-    background-color: #444;
+    top: 100%;
+    left: 0;
+    background-color: #B72426;
     width: 200px;
-    box-shadow: 0 8px 16px rgba(127, 3, 3, 0.877);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .dropdown-menu a {
-    display: block;
-    color: white;
-    text-decoration: none;
+    color: rgb(12, 0, 0);
     padding: 12px 16px;
-    text-align: left;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
 }
 
 .dropdown-menu a:hover {
-    background-color: #555;
+    background-color: #8c1c1e;
 }
 
 .menu-container.active .dropdown-menu {
     display: block;
-    animation: dropdown 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 p {
@@ -251,7 +286,7 @@ p {
     position: absolute;
     left: 100%;
     top: 0;
-    background-color: #444;
+    background-color: #e1d303;
     min-width: 200px;
 }
 
@@ -279,7 +314,8 @@ p {
     flex-wrap: wrap;
     position: relative;
     margin-top: 20px;
-    align-items: flex-start; /* Thêm dòng này */
+    align-items: flex-start;
+    /* Thêm dòng này */
 }
 
 .sidebar {
@@ -290,9 +326,12 @@ p {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    align-self: flex-start; /* Thêm dòng này */
-    max-height: calc(100vh - 40px); /* Thêm dòng này */
-    overflow-y: auto; /* Thêm dòng này */
+    align-self: flex-start;
+    /* Thêm dòng này */
+    max-height: calc(100vh - 40px);
+    /* Thêm dòng này */
+    overflow-y: auto;
+    /* Thêm dòng này */
 }
 
 .sidebar-title {
@@ -338,12 +377,12 @@ p {
     .content {
         flex-direction: column;
     }
-    
+
     .sidebar {
         width: 100%;
         position: static;
     }
-    
+
     .main-content {
         padding-left: 0;
     }
@@ -354,12 +393,12 @@ p {
     .content {
         flex-direction: column;
     }
-    
+
     .sidebar {
         width: 100%;
         position: static;
     }
-    
+
     .main-content {
         padding-left: 0;
     }
@@ -370,15 +409,15 @@ p {
     .navbar ul {
         display: none;
     }
-    
+
     .menu-container {
         display: block;
     }
-    
+
     .hamburger {
         display: block;
     }
-    
+
     .menu-container.active ul {
         display: block;
         position: absolute;
@@ -387,11 +426,11 @@ p {
         width: 100%;
         background-color: #B72426;
     }
-    
+
     .menu-container.active ul li {
         display: block;
     }
-    
+
     .menu-container.active ul li a {
         padding: 15px;
     }

@@ -86,7 +86,7 @@
                     <i class="fas fa-umbrella-beach"></i>
                     <span>DU LỊCH</span>
                 </a>
-                <a href="#" class="menu-item">
+                <a href="DliTV.html" class="menu-item">
                     <i class="fas fa-map-marked-alt"></i>
                     <span>ĐỊA LÝ</span>
                 </a>
@@ -98,14 +98,23 @@
         </div>
         <div class="main-content">
             <h2 class="table-of-contents">Mục lục</h2>
-            <nav class="toc">
+            <nav id="toc" class="toc">
                 <ul>
-                    <li><a href="#introduction"><i class="fas fa-info-circle"></i> Giới thiệu</a></li>
-                    <li><a href="#phase1"><i class="fas fa-history"></i> Giai đoạn 1: 1732 - 1900</a></li>
-                    <li><a href="#phase2"><i class="fas fa-history"></i> Giai đoạn 2: 1900 - 1992</a></li>
-                    <li><a href="#modern-era"><i class="fas fa-city"></i> Thời kỳ hiện đại</a></li>
-                    <li><a href="#resistance"><i class="fas fa-fist-raised"></i> Kháng chiến chống Pháp và Mỹ</a></li>
-                    <li><a href="#post-war"><i class="fas fa-dove"></i> Sau chiến tranh</a></li>
+                    <li>
+                        <a href="#introduction"><i class="fas fa-info-circle"></i> Giới thiệu</a>
+                        <ul>
+                            <li><a href="#phase1"><i class="fas fa-history"></i> Giai đoạn 1: 1732 - 1900</a></li>
+                            <li><a href="#phase2"><i class="fas fa-history"></i> Giai đoạn 2: 1900 - 1992</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#modern-era"><i class="fas fa-city"></i> Thời kỳ hiện đại</a>
+                        <ul>
+                            <li><a href="#resistance"><i class="fas fa-fist-raised"></i> Kháng chiến chống Pháp và
+                                    Mỹ</a></li>
+                            <li><a href="#post-war"><i class="fas fa-dove"></i> Sau chiến tranh</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
 
@@ -332,6 +341,20 @@
         function toggleMenu() {
             var menuContainer = document.querySelector('.menu-container');
             menuContainer.classList.toggle('active');
+        }
+
+        // New JavaScript for sticky table of contents
+        window.onscroll = function () { stickyTOC() };
+
+        var toc = document.getElementById("toc");
+        var sticky = toc.offsetTop;
+
+        function stickyTOC() {
+            if (window.pageYOffset >= sticky) {
+                toc.classList.add("sticky")
+            } else {
+                toc.classList.remove("sticky");
+            }
         }
     </script>
 </body>

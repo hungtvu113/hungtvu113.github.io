@@ -262,6 +262,7 @@ p {
     text-align: justify;
     font-size: 18px;
     margin-top: 20px;
+    margin-bottom: 25px;
 }
 
 @keyframes dropdown {
@@ -500,4 +501,143 @@ p {
     .footer-section {
         margin-right: 0;
     }
+}
+
+#table-of-contents {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    max-width: 250px;
+    z-index: 1000;
+}
+
+#table-of-contents h2 {
+    margin-top: 0;
+    cursor: pointer;
+}
+
+#table-of-contents ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#table-of-contents li {
+    margin-bottom: 5px;
+}
+
+#table-of-contents a {
+    text-decoration: none;
+    color: #333;
+}
+
+#table-of-contents a:hover {
+    text-decoration: underline;
+}
+
+.toc-list.hidden {
+    display: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 20px;
+}
+
+.toggle-icon {
+    float: right;
+}
+
+.sticky-right {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 200px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+#right-table-of-contents h3 {
+    margin-top: 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#right-table-of-contents .toc-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+#right-table-of-contents .toc-list li {
+    margin-bottom: 5px;
+}
+
+#right-table-of-contents .toc-list a {
+    text-decoration: none;
+    color: #333;
+}
+
+#right-table-of-contents .toc-list a:hover {
+    color: #007bff;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sticky-right {
+        display: none;
+    }
+}
+
+.toc {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.toc ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.toc ul ul {
+    padding-left: 20px;
+}
+
+.toc a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.toc a:hover {
+    color: #007bff;
+}
+
+.toc.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toc>ul>li>ul {
+    display: none;
+}
+
+.toc>ul>li:hover>ul {
+    display: block;
 }

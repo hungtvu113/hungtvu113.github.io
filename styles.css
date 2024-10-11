@@ -642,10 +642,7 @@ p {
     display: block;
 }
 
-.main-content {
-    position: relative;
-    display: flex;
-}
+
 
 .table-of-contents {
     position: sticky;

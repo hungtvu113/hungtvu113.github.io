@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <nav class="navbar">
         <div class="container">
             <div class="menu-container">
@@ -36,15 +37,17 @@
 
                 <li><a href="#">DI TÍCH</a></li>
                 <li><a href="introduce.html">GIỚI THIỆU</a></li>
+
             </ul>
         </div>
     </nav>
-
     <div class="top-nav">
         <div class="logo">
             <img src="Images/logo.png" alt="Logo">
         </div>
+
         <div class="nav-links">
+
             <div class="social-icons">
                 <div class="facebook_icon">
                     <a href="#" class="fab fa-facebook"></a>
@@ -73,6 +76,7 @@
                     <i class="fas fa-heart"></i>
                     <span>HAPPY TRÀ VINH</span>
                 </a>
+
                 <a href="DL_2024.html" class="menu-item">
                     <i class="fas fa-umbrella-beach"></i>
                     <span>DU LỊCH</span>
@@ -87,15 +91,10 @@
                 </a>
             </div>
         </div>
-
-        <a href="https://vi.wikipedia.org/wiki/Tr%C3%A0_Vinh" target="_blank">
-            <img src="Images/Logo_tỉnh_Trà_Vinh.svg.png" alt="Map of Trà Vinh" class="resize-img">
-        </a>
-
-        <div class="main-content" id="main-content">
-            <!-- Nội dung sẽ được điền bởi JavaScript -->
-        </div>
     </div>
+
+
+
 
     <footer class="footer">
         <div class="container">
@@ -128,7 +127,6 @@
             </div>
         </div>
     </footer>
-
     <script>
         function toggleMenu() {
             var menuContainer = document.querySelector('.menu-container');
@@ -136,40 +134,6 @@
             menuContainer.classList.toggle('active');
             hamburger.classList.toggle('active');
         }
-
-        async function fetchData() {
-            try {
-                const response = await fetch('/data/dliTV.json');
-                const data = await response.json();
-                renderContent(data);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        }
-
-        function renderContent(data) {
-            const mainContent = document.getElementById('main-content');
-            let html = `<h1>${data.pageTitle}</h1><hr><p>${data.introduction}</p>`;
-
-            data.sections.forEach(section => {
-                html += `<h1>${section.title}</h1><p>${section.content}</p>`;
-                if (section.source) {
-                    html += `<p><i>${section.source}</i></p>`;
-                }
-            });
-
-            html += `<h1>Tài nguyên thiên nhiên</h1>`;
-            data.resources.forEach(resource => {
-                html += `<p><strong>${resource.title}</strong></p><p>${resource.content}</p>`;
-                if (resource.source) {
-                    html += `<p><i>${resource.source}</i></p>`;
-                }
-            });
-
-            mainContent.innerHTML = html;
-        }
-
-        document.addEventListener('DOMContentLoaded', fetchData);
     </script>
 </body>
 

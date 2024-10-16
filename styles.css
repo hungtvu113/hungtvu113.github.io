@@ -35,30 +35,48 @@ h1 {
 }
 
 .search-bar {
-    overflow: hidden;
     width: 100%;
-    margin: 20px auto;
-    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    overflow: hidden;
 }
 
 .search-bar h1 {
     color: white;
     background-color: #ce0404;
-    padding: 15px 0;
+    padding: 15px 10;
+}
+
+.sliding-text-container {
+    width: 100%;
+    overflow: hidden;
 }
 
 .sliding-text {
-    animation: slideInFromRight 15s linear infinite;
     white-space: nowrap;
+    animation: slide 15s linear infinite;
 }
 
-@keyframes slideInFromRight {
+.sliding-text h1 {
+    display: inline-block;
+    font-size: 2.8rem;
+    margin: 0;
+    padding: 0 20px;
+}
+
+@keyframes slide {
     0% {
         transform: translateX(100%);
     }
 
     100% {
         transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .sliding-text h1 {
+        font-size: 1rem;
     }
 }
 
@@ -603,7 +621,7 @@ p {
     border: 1px solid #e9ecef;
     border-radius: 4px;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .toc ul {
@@ -628,8 +646,8 @@ p {
 
 .toc.sticky {
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 50px;
+    width: 20%;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

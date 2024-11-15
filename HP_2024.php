@@ -13,37 +13,14 @@
 </head>
 
 <body>
+    <?php 
+    session_start();
+    include 'nav.php'; 
+    ?>
 
-    <nav class="navbar">
-        <div class="container">
-            <div class="menu-container">
-                <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
-                <div class="dropdown-menu">
-                    <a href="#">Đăng nhập</a>
-                    <a href="HD_TV.html">Hướng dẫn</a>
-                    <a href="Terms _&_Conditions.html">Điều khoản</a>
-                </div>
-            </div>
-            <ul>
-                <li><a href="index.html">TRANG CHỦ</a></li>
-                <li><a href="history_time.html">DÒNG LỊCH SỬ</a></li>
-                <li>
-                    <a href="tacpham_tv.html">TƯ LIỆU</a>
-                    <div class="dropdown">
-                        <a href="tacpham_tv.html">Tác phẩm</a>
-                        <a href="bando_tv.html">Bản đồ</a>
-                    </div>
-                </li>
-
-                <li><a href="ditich_tv.html">DI TÍCH</a></li>
-                <li><a href="introduce.html">GIỚI THIỆU</a></li>
-
-            </ul>
-        </div>
-    </nav>
     <div class="top-nav">
         <div class="logo">
-            <a href="index.html"><img src="Images/logo.png" alt="Logo"></a>
+            <a href="index.php"><img src="Images/logo.png" alt="Logo"></a>
         </div>
 
         <div class="nav-links">
@@ -92,54 +69,36 @@
                 </a>
             </div>
         </div>
+
         <div class="main-content">
-            <h1>HAPPY TRÀ VINH</h1>
-            <img src="Images/Le-Hoi-Ok-Om-Bok-Tai-01.jpg" alt="HAPPY TRÀ VINH" class="resize-image">
-            <p><i>Lễ hội Ok Om Bok tại tỉnh Trà Vinh. Ảnh: travinh.dsc.vn</i></p>
-            <p>
-                Đến năm 2025, Trà Vinh đặt mục tiêu nâng tầm quy mô tổ chức Lễ hội Ok Om Bok lên cấp quốc gia; đưa du
-                lịch thành ngành kinh tế mũi nhọn của tỉnh vào năm 2030.
-            </p>
+            <div class="upload-section">
+                <h2>Chia sẻ khoảnh khắc của bạn</h2>
+                <form action="upload.php" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="title">Tiêu đề:</label>
+                        <input type="text" id="title" name="title" class="form-control" required>
+                    </div>
 
-            <hr>
+                    <div class="form-group">
+                        <label for="content">Nội dung:</label>
+                        <textarea id="content" name="content" class="form-control" rows="4" required></textarea>
+                    </div>
 
-            <img src="Images/cac-tua-bin-gio.jpg" alt="HAPPY TRÀ VINH" class="resize-image">
-            <p><i>Các tua bin gió giữa biển khơi bao la. Ảnh: thamhiemmekong</i></p>
-            <p>
-                Nếu có dịp đến khu vực biển Ba Động Trà Vinh, bạn đừng bỏ qua trải nghiệm thú vị ở điện gió Duyên Hải
-                Trà Vinh – nơi được biết đến là địa điểm sống ảo Hot nhất miền Tây thời gian gần đây.
-            </p>
+                    <div class="form-group">
+                        <label for="image">Hình ảnh:</label>
+                        <input type="file" id="image" name="image" class="form-control" accept="image/*" required>
+                    </div>
 
-            <hr>
+                    <button type="submit" class="btn btn-primary">Đăng bài</button>
+                </form>
+            </div>
 
-            <img src="Images/tha_dieu.jpg" alt="HAPPY TRÀ VINH" class="resize-image">
-            <p>- Tác giả: Nhân</p>
-            <p>- Ngày tham dự: 14/04/2024</p>
-            <p>- Mã bài dự thi: 33841</p>
-            <p>- Link tác phẩm dự thi: https://happy.vietnam.vn/contest/image-2024/submission/33841</p>
-            <p>- Tác phẩm: "Cánh diều" - Chụp tại: Trà Vinh - Đơn vị:</p>
-            <p>Lời giới thiệu: Rộn ràng mùa diều 2024. Ký ức tuổi thơ của bao thế hệ</p>
-
-            <hr>
-
-            <img src="Images/le_hoi.jpg" alt="HAPPY TRÀ VINH" class="resize-image">
-            <p>- Tác giả: Nhân</p>
-            <p>- Ngày tham dự: 13/04/2024</p>
-            <p>- Mã bài dự thi: 33823</p>
-            <p>- Link tác phẩm dự thi: https://happy.vietnam.vn/contest/image-2024/submission/33823</p>
-            <p>- Tác phẩm: "Okombok 2024" - Chụp tại: Trà Vinh - Đơn vị:</p>
-            <p>Lời giới thiệu: Ao bà ôm đêm lễ hội</p>
-
-            <hr>
-
-            <img src="Images/trong_cay.jpg" alt="HAPPY TRÀ VINH" class="resize-image">
-            <p>- Tác giả: Phạm Thị Trúc Đào</p>
-            <p>- Ngày tham dự: 01/08/2024</p>
-            <p>- Mã bài dự thi: 591064</p>
-            <p>- Link tác phẩm dự thi: https://happy.vietnam.vn/contest/image-2024/submission/591064</p>
-            <p>- Tác phẩm: "Trồng rừng ngập mặn" - Chụp tại: Trà Vinh - Đơn vị: Cá nhân</p>
-            <p>Lời giới thiệu: Mỗi ngày là một niềm vui khi cùng nhau lao động làm việc thiện nguyện và có ý nghĩa giúp
-                ích cho mọi người.</p>
+            <div class="posts-section">
+                <h2>Bài đăng gần đây</h2>
+                <div id="posts-container">
+                    <!-- Bài đăng sẽ được load động từ database -->
+                </div>
+            </div>
         </div>
     </div>
 
@@ -160,7 +119,7 @@
                 <div class="footer-section links">
                     <h3>Liên kết nhanh</h3>
                     <ul>
-                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="index.php">Trang chủ</a></li>
                         <li><a href="history_time.html">Dòng lịch sử</a></li>
                         <li><a href="tacpham_tv.html">Tư liệu</a></li>
                         <li><a href="bando_tv.html">Bản đồ</a></li>
@@ -187,6 +146,33 @@
             menuContainer.classList.toggle('active');
             hamburger.classList.toggle('active');
         }
+    </script>
+    <script>
+        // Function để load bài đăng
+        function loadPosts() {
+            fetch('display_posts.php')
+                .then(response => response.json())
+                .then(posts => {
+                    const container = document.getElementById('posts-container');
+                    container.innerHTML = '';
+
+                    posts.forEach(post => {
+                        const postElement = document.createElement('div');
+                        postElement.className = 'post-item';
+                        postElement.innerHTML = `
+                            <h3>${post.title}</h3>
+                            <img src="${post.image_path}" alt="${post.title}" class="post-image">
+                            <p>${post.content}</p>
+                            <small>Đăng ngày: ${new Date(post.created_at).toLocaleDateString('vi-VN')}</small>
+                        `;
+                        container.appendChild(postElement);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Load bài đăng khi trang được tải
+        document.addEventListener('DOMContentLoaded', loadPosts);
     </script>
 </body>
 

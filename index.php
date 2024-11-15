@@ -1,3 +1,21 @@
+<?php
+session_start();
+
+// Kiểm tra cookie nếu chưa có session
+if(!isset($_SESSION['username']) && isset($_COOKIE['remember_token']) && isset($_COOKIE['username'])) {
+    $conn = mysqli_connect("localhost", "username", "password", "database_name");
+    
+    $token = mysqli_real_escape_string($conn, $_COOKIE['remember_token']);
+    $username = mysqli_real_escape_string($conn, $_COOKIE['username']);
+    
+    $query = "SELECT * FROM users WHERE username='$username' AND remember_token='$token'";
+    $result = mysqli_query($conn, $query);
+    
+    if(mysqli_num_rows($result) == 1) {
+        $_SESSION['username'] = $username;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -13,37 +31,11 @@
 </head>
 
 <body>
-
-    <nav class="navbar">
-        <div class="container">
-            <div class="menu-container">
-                <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
-                <div class="dropdown-menu">
-                    <a href="#">Đăng nhập</a>
-                    <a href="HD_TV.html">Hướng dẫn</a>
-                    <a href="Terms _&_Conditions.html">Điều khoản</a>
-                </div>
-            </div>
-            <ul>
-                <li><a href="Trangchu.html">TRANG CHỦ</a></li>
-                <li><a href="history_time.html">DÒNG LỊCH SỬ</a></li>
-                <li>
-                    <a href="tacpham_tv.html">TƯ LIỆU</a>
-                    <div class="dropdown">
-                        <a href="tacpham_tv.html">Tác phẩm</a>
-                        <a href="bando_tv.html">Bản đồ</a>
-                    </div>
-                </li>
-
-                <li><a href="ditich_tv.html">DI TÍCH</a></li>
-                <li><a href="introduce.html">GIỚI THIỆU</a></li>
-
-            </ul>
-        </div>
-    </nav>
+    <?php include 'nav.php'; ?>
+    
     <div class="top-nav">
         <div class="logo">
-            <a href="index.html"><img src="Images/logo.png" alt="Logo"></a>
+            <a href="index.php"><img src="Images/logo.png" alt="Logo"></a>
         </div>
 
 
@@ -75,7 +67,7 @@
         <div class="sidebar">
             <h2 class="sidebar-title">Khám phá Trà Vinh</h2>
             <div class="menu-container">
-                <a href="HP_2024.html" class="menu-item">
+                <a href="HP_2024.php" class="menu-item">
                     <i class="fas fa-heart"></i>
                     <span>HAPPY TRÀ VINH</span>
                 </a>
@@ -136,7 +128,7 @@
                 <div class="footer-section links">
                     <h3>Liên kết nhanh</h3>
                     <ul>
-                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="index.php">Trang chủ</a></li>
                         <li><a href="history_time.html">Dòng lịch sử</a></li>
                         <li><a href="tacpham_tv.html">Tư liệu</a></li>
                         <li><a href="bando_tv.html">Bản đồ</a></li>

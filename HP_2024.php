@@ -27,14 +27,9 @@
 
             <div class="social-icons">
                 <div class="facebook_icon">
-                    <a href="#" class="fab fa-facebook"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61556071283286&mibextid=ZbWKwL" class="fab fa-facebook"></a>
                 </div>
-                <div class="google_icon">
-                    <a href="#" class="fab fa-google-plus-g"></a>
-                </div>
-                <div class="twitter_icon">
-                    <a href="#" class="fab fa-twitter"></a>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -55,15 +50,15 @@
                     <i class="fas fa-heart"></i>
                     <span>HAPPY TRÀ VINH</span>
                 </a>
-                <a href="DL_2024.html" class="menu-item">
+                <a href="DL_2024.php" class="menu-item">
                     <i class="fas fa-umbrella-beach"></i>
                     <span>DU LỊCH</span>
                 </a>
-                <a href="DliTV.html" class="menu-item">
+                <a href="DliTV.php" class="menu-item">
                     <i class="fas fa-map-marked-alt"></i>
                     <span>ĐỊA LÝ</span>
                 </a>
-                <a href="VH_TV.html" class="menu-item">
+                <a href="VH_TV.php" class="menu-item">
                     <i class="fas fa-theater-masks"></i>
                     <span>VĂN HÓA</span>
                 </a>
@@ -120,11 +115,11 @@
                     <h3>Liên kết nhanh</h3>
                     <ul>
                         <li><a href="index.php">Trang chủ</a></li>
-                        <li><a href="history_time.html">Dòng lịch sử</a></li>
-                        <li><a href="tacpham_tv.html">Tư liệu</a></li>
-                        <li><a href="bando_tv.html">Bản đồ</a></li>
-                        <li><a href="ditich_tv.html">Di tích</a></li>
-                        <li><a href="introduce.html">Giới thiệu</a></li>
+                        <li><a href="history_time.php">Dòng lịch sử</a></li>
+                        <li><a href="tacpham_tv.php">Tư liệu</a></li>
+                        <li><a href="bando_tv.php">Bản đồ</a></li>
+                        <li><a href="ditich_tv.php">Di tích</a></li>
+                        <li><a href="introduce.php">Giới thiệu</a></li>
                     </ul>
                 </div>
                 <div class="footer-section contact">
@@ -134,9 +129,7 @@
                     <p><i class="fas fa-envelope"></i> info@hungtvu113.github.io</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Con người Trà Vinh. Tất cả quyền được bảo lưu.</p>
-            </div>
+        
         </div>
     </footer>
     <script>

@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open trang_chu.html",
-            "file": "d:\\DOAN\\trang_chu.html"
+            "name": "Open trang_chu.php",
+            "file": "d:\\DOAN\\trang_chu.php"
         }
     ]
 }

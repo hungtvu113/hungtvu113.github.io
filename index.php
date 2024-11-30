@@ -35,7 +35,7 @@ if(!isset($_SESSION['username']) && isset($_COOKIE['remember_token']) && isset($
     
     <div class="top-nav">
         <div class="logo">
-            <a href="index.php"><img src="Images/logo.png" alt="Logo"></a>
+            <a href="Trangchu.php"><img src="Images/logo.png" alt="Logo"></a>
         </div>
 
 
@@ -43,14 +43,9 @@ if(!isset($_SESSION['username']) && isset($_COOKIE['remember_token']) && isset($
 
             <div class="social-icons">
                 <div class="facebook_icon">
-                    <a href="#" class="fab fa-facebook"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61556071283286&mibextid=ZbWKwL" class="fab fa-facebook"></a>
                 </div>
-                <div class="google_icon">
-                    <a href="#" class="fab fa-google-plus-g"></a>
-                </div>
-                <div class="twitter_icon">
-                    <a href="#" class="fab fa-twitter"></a>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -72,15 +67,15 @@ if(!isset($_SESSION['username']) && isset($_COOKIE['remember_token']) && isset($
                     <span>HAPPY TRÀ VINH</span>
                 </a>
 
-                <a href="DL_2024.html" class="menu-item">
+                <a href="DL_2024.php" class="menu-item">
                     <i class="fas fa-umbrella-beach"></i>
                     <span>DU LỊCH</span>
                 </a>
-                <a href="DliTV.html" class="menu-item">
+                <a href="DliTV.php" class="menu-item">
                     <i class="fas fa-map-marked-alt"></i>
                     <span>ĐỊA LÝ</span>
                 </a>
-                <a href="VH_TV.html" class="menu-item">
+                <a href="VH_TV.php" class="menu-item">
                     <i class="fas fa-theater-masks"></i>
                     <span>VĂN HÓA</span>
                 </a>
@@ -92,19 +87,23 @@ if(!isset($_SESSION['username']) && isset($_COOKIE['remember_token']) && isset($
                 biển lùi", vùng đất có tên gọi "Trà Vang" – tiền thân của tỉnh Trà Vinh sau này đã được hình thành từ
                 lâu đời. Vào thời kỳ đó, Trà Vinh vẫn còn là một vùng đất rất hoang vu, các loại cây rừng trùm lên những
                 giồng đất, những đầm lầy và sông rạch chằng chịt, dân cư thưa thớt.</p>
+                <p><i>(Nguồn: vietnam.vn)</i></p>
             <img src="Images/map_TV.jpg" alt="Anh" class="resize-image">
+            <p><i>(Nguồn báo Trà Vinh)</p></i>
             <p>
                 Vào thế kỷ XVII, các quốc gia phong kiến như Việt Nam, Trung Quốc, Campuchia… trong bối cảnh chung của
                 thế giới đã không tránh khỏi sự khủng hoảng và suy yếu. Ở Việt Nam, cuộc chiến tranh Trịnh – Nguyễn
                 (1627-1673) đã chia cắt đất nước thành hai xứ: Đàng trong và Đàng ngoài (lấy sông Gianh làm ranh giới).
                 Điều này đã làm cho hàng vạn nông dân lâm vào thảm họa bị tiêu diệt, phải đi tìm cõi sống ở Phương Nam.
             </p>
+            <p><i>(Nguồn: vietnam.vn)</i></p>
             <p>
                 Trước thực tế khách quan đó, vào cuối thế kỷ thứ XVII, các Chúa Nguyễn đã chủ động tổ chức di dân người
                 Việt vào vùng đất Nam bộ, thực thi những chính sách chiêu mộ lưu dân và đưa quân đội vào Nam khai phá
                 đất đai. Cùng với người Việt và người Khmer, người Hoa cũng được Chúa Nguyễn tạo điều kiện để cùng nhau
                 khai phá và định cư trên vùng đất phía Nam này, trong đó có vùng đất Trà Vinh.
             </p>
+            <p><i>(Nguồn: vietnam.vn)</i></p>
             <p>
                 Như vậy, vùng đất Trà Vinh, con đẻ của Biển Đông và sông Cửu Long, một vùng đất chứa đựng một hệ sinh
                 thái đa dạng cùng với nhiều tiềm năng kinh tế khác nhau, vào thế kỷ thứ XVII đã có chủ nhân là một cộng
@@ -112,7 +111,9 @@ if(!isset($_SESSION['username']) && isset($_COOKIE['remember_token']) && isset($
                 này là một trong những sự kiện lịch sử có ý nghĩa cực kỳ trọng đại đối với sự hình thành và phát triển
                 của tỉnh Trà Vinh sau này.
             </p>
+            <p><i>(Nguồn: vietnam.vn)</i></p>
             <img src="Images/ban_do_Tv.jpg" alt="Anh 1" class="resize-image">
+            <p><i>(Nguồn: Báo Trà Vinh)</i></p>
         </div>
     </div>
 
@@ -129,11 +130,11 @@ if(!isset($_SESSION['username']) && isset($_COOKIE['remember_token']) && isset($
                     <h3>Liên kết nhanh</h3>
                     <ul>
                         <li><a href="index.php">Trang chủ</a></li>
-                        <li><a href="history_time.html">Dòng lịch sử</a></li>
-                        <li><a href="tacpham_tv.html">Tư liệu</a></li>
-                        <li><a href="bando_tv.html">Bản đồ</a></li>
-                        <li><a href="ditich_tv.html">Di tích</a></li>
-                        <li><a href="introduce.html">Giới thiệu</a></li>
+                        <li><a href="history_time.php">Dòng lịch sử</a></li>
+                        <li><a href="tacpham_tv.php">Tư liệu</a></li>
+                        <li><a href="bando_tv.php">Bản đồ</a></li>
+                        <li><a href="ditich_tv.php">Di tích</a></li>
+                        <li><a href="introduce.php">Giới thiệu</a></li>
                     </ul>
                 </div>
                 <div class="footer-section contact">
@@ -143,9 +144,7 @@ if(!isset($_SESSION['username']) && isset($_COOKIE['remember_token']) && isset($
                     <p><i class="fas fa-envelope"></i> info@connguoitravinh.com</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Con người Trà Vinh. Tất cả quyền được bảo lưu.</p>
-            </div>
+         
         </div>
     </footer>
     <script>

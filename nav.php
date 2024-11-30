@@ -35,6 +35,7 @@
             </li>
             <li><a href="ditich_tv.php">DI TÍCH</a></li>
             <li><a href="introduce.php">GIỚI THIỆU</a></li>
+            <li><a href="cauhoi.php">CÂU HỎI</a></li>
         </ul>
     </div>
 </nav>

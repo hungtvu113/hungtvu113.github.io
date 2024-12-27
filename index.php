@@ -155,8 +155,34 @@ if(!isset($_SESSION['username']) && isset($_COOKIE['remember_token']) && isset($
             menuContainer.classList.toggle('active');
             hamburger.classList.toggle('active');
         }
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopButton = document.getElementById('scrollToTop');
+    
+    // Hiển thị/ẩn nút khi cuộn
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 200) {
+            scrollToTopButton.classList.add('visible');
+        } else {
+            scrollToTopButton.classList.remove('visible');
+        }
+    });
+    
+    // Xử lý sự kiện click
+    scrollToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
     </script>
 
+    <button id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 
 </html>
